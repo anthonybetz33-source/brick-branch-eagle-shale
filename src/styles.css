@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Sora", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --color-bg: #07090f;
+  --color-bg-elevated: #0e121b;
+  --color-surface: #141a26;
+  --color-surface-2: #1b2333;
+  --color-fg: #e8eaef;
+  --color-muted: #8b93a7;
+  --color-subtle: #5c6578;
+  --color-border: #252d3d;
+  --color-accent: #5eead4;
+  --color-accent-fg: #042f2e;
+  --color-accent-dim: #134e4a;
+  --color-ok: #34d399;
+  --color-ok-fg: #022c22;
+  --color-bad: #fb7185;
+  --color-bad-fg: #4c0519;
+  --color-warn: #f8d48a;
+  --color-warn-fg: #2a2210;
+  --color-ring: #5eead4;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+
+  --shadow-glow: 0 0 0 1px color-mix(in oklab, var(--color-accent) 28%, transparent),
+    0 12px 40px -18px rgb(0 0 0 / 0.7);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    min-height: 100dvh;
+    background:
+      radial-gradient(1200px 600px at 8% -10%, color-mix(in oklab, var(--color-accent) 8%, transparent), transparent 55%),
+      radial-gradient(900px 500px at 100% 0%, color-mix(in oklab, #60a5fa 6%, transparent), transparent 50%),
+      var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.03em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-accent) 35%, transparent);
+    color: var(--color-fg);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, color-mix(in oklab, var(--color-fg) 4%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklab, var(--color-fg) 4%, transparent) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

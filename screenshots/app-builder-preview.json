@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "C955 Mastery",
+      "hasCanvas": false,
+      "bodyTextLen": 748,
+      "bodyTextHash": "c1545889fcba98f5649a26a33e2f1232cf463d79596b57fe4feea16130a3d9ab",
+      "bodyTextPrefix": "Σ C955 Mastery Applied Probability & Statistics Home Learn Quiz ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "C955 Mastery",
+      "hasCanvas": false,
+      "bodyTextLen": 683,
+      "bodyTextHash": "29b6fc96b4195f9a91c750cd0f076cd0c50cb5c22aec059a29f17fde2ca6b0aa",
+      "bodyTextPrefix": "Σ C955 Mastery WGU C955 TUTOR C955 Progress Learn the idea in pl",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
